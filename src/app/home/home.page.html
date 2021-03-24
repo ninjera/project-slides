@@ -1,0 +1,32 @@
+<ion-header >
+  </ion-header>
+
+<ion-content>
+  <div id="container">
+    <h5>{{title}}</h5>
+    <ion-slides>
+      <ion-slide *ngFor="let item of arrayMenu">
+      <ion-card>
+        <img class="ion-img-internal" src="{{item.imagenURL}}" alt="">
+        <ion-card-header>
+          <ion-card-subtitle>
+            <h5 class="ionic-text-capitalize" > {{item.diaSemana}}</h5>
+          </ion-card-subtitle>
+          <ion-card-tittle>
+            <p>
+              {{item.descuento}}
+            </p>
+            <ion-card-content>
+              {{item.descripcion}}
+              
+            </ion-card-content>
+          </ion-card-tittle>
+        </ion-card-header>
+        <ion-button  color="warning" class="ion-text-capitalize">
+          <ion-icon name="cart"></ion-icon>pedir
+        </ion-button>
+      </ion-card>
+    </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
